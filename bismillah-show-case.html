@@ -959,6 +959,49 @@ console.log(greet('BismillahCSS'));
         </div>
       </div>
     </section>
+
+    <!-- New Badges & Toasts Section -->
+    <section id="badges-toasts" class="section">
+      <h2 class="section-title">Badges & Toasts</h2>
+
+      <div class="component-demo">
+        <h3 class="component-title">Badges</h3>
+        <div class="demo-grid">
+          <span class="bismillah-badge bismillah-badge-primary">Primary</span>
+          <span class="bismillah-badge bismillah-badge-secondary">Secondary</span>
+          <span class="bismillah-badge bismillah-badge-success">Success</span>
+          <span class="bismillah-badge bismillah-badge-warning">Warning</span>
+          <span class="bismillah-badge bismillah-badge-danger">Danger</span>
+          <span class="bismillah-badge bismillah-badge-info">Info</span>
+          <span class="bismillah-badge bismillah-badge-light">Light</span>
+          <span class="bismillah-badge bismillah-badge-dark">Dark</span>
+          <span class="bismillah-badge bismillah-badge-outline bismillah-text-primary">Outline</span>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <h3 class="component-title">Toasts</h3>
+        <div class="demo-grid">
+          <div class="bismillah-toast bismillah-toast-success">
+            <span>🎉 Success: Action completed.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-warning">
+            <span>⚠️ Warning: Check your values.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-danger">
+            <span>❌ Error: Something went wrong.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-info">
+            <span>ℹ️ Info: Update available.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
   
   <!-- Theme Toggle Button -->
@@ -1033,6 +1076,19 @@ console.log(greet('BismillahCSS'));
           collapseContent.style.height = 'auto';
         }
       }
+    });
+
+    // Toast close actions
+    document.querySelectorAll('.bismillah-toast-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const toast = btn.closest('.bismillah-toast');
+        if (toast) {
+          toast.style.opacity = '0';
+          toast.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
+          toast.style.transform = 'translateY(-8px)';
+          setTimeout(() => toast.remove(), 250);
+        }
+      });
     });
   </script>
 </body>

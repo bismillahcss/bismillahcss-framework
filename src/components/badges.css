@@ -1,0 +1,31 @@
+/* ============================= */
+/* 🌟 BismillahCSS - Badges */
+/* ============================= */
+
+.bismillah-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 9999px;
+  transition: all 0.25s ease-in-out;
+}
+
+.bismillah-badge-primary { background-color: #007bff; color: #fff; }
+.bismillah-badge-secondary { background-color: #6c757d; color: #fff; }
+.bismillah-badge-success { background-color: #28a745; color: #fff; }
+.bismillah-badge-warning { background-color: #ffc107; color: #212529; }
+.bismillah-badge-danger  { background-color: #dc3545; color: #fff; }
+.bismillah-badge-info    { background-color: #0ea5e9; color: #fff; }
+.bismillah-badge-light   { background-color: #f8f9fa; color: #212529; }
+.bismillah-badge-dark    { background-color: #212529; color: #fff; }
+
+/* Outline badge stage */
+.bismillah-badge-outline {
+  background: transparent;
+  border: 1px solid currentColor;
+}

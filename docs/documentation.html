@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BismillahCSS Documentation</title>
+  <link rel="stylesheet" href="../src/bismillah.css" />
+  <style>
+    body { margin: 0; font-family: Inter, Arial, sans-serif; background: #f5f7fb; color: #1f2937; }
+    .doc-shell { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    h1, h2, h3 { color: #0f172a; }
+    .hero { padding: 2rem 1rem; border-radius: 0.8rem; background: #ebf4ff; margin-bottom: 1.2rem; border: 1px solid #c7d2fe; }
+    pre { border-radius: 8px; background: #111827; color: #e5e7eb; padding: 1rem; overflow-x: auto; }
+    code { font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; }
+    .grid-2 { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr); gap: 1rem; }
+    .card { border-radius: 0.7rem; background: #fff; border: 1px solid #e5e7eb; padding: 1rem; box-shadow: 0 2px 8px rgba(15, 23, 42, .06); }
+    .inline-demo * { margin: 0.25rem 0.3rem; }
+    .note { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 0.8rem; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <main class="doc-shell">
+    <section class="hero">
+      <h1>BismillahCSS Documentation</h1>
+      <p>Utility-first CSS framework. No JS dependencies. Mobile-first responsive components. Fully customizable with CSS variables.</p>
+    </section>
+
+    <section>
+      <h2>1. Installation</h2>
+      <h3>npm</h3>
+      <pre><code>npm install bismillahcss</code></pre>
+
+      <h3>CDN</h3>
+      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css" /&gt;</code></pre>
+
+      <h3>Manual</h3>
+      <p>Copy `src/bismillah.css` and the `src` folder into your project, or import from package build output.</p>
+    </section>
+
+    <section>
+      <h2>2. Get Started</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="bismillah-container"&gt;
+    &lt;h1 class="bismillah-text-3xl bismillah-font-bold"&gt;Hello BismillahCSS&lt;/h1&gt;
+    &lt;button class="bismillah-btn bismillah-btn-primary"&gt;Primary&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </section>
+
+    <section>
+      <h2>3. Core Theme Variables</h2>
+      <p>Customize your design system by overriding CSS variables before loading BismillahCSS.</p>
+      <pre><code>:root {
+  --bismillah-primary-color: #1e40af;
+  --bismillah-secondary-color: #64748b;
+  --bismillah-success-color: #16a34a;
+  --bismillah-warning-color: #eab308;
+  --bismillah-danger-color: #dc2626;
+  --bismillah-info-color: #0ea5e9;
+  --bismillah-bg-color: #f8f9fa;
+  --bismillah-text-color: #212529;
+  --bismillah-border-radius: 8px;
+}
+</code></pre>
+    </section>
+
+    <section>
+      <h2>4. Utility Classes</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Spacing</h3>
+          <pre><code>.bismillah-m-1, .bismillah-p-1 ...</code></pre>
+          <p>Use `bismillah-m-0` ... `bismillah-p-5` and `auto`.</p>
+        </div>
+        <div class="card">
+          <h3>Typography</h3>
+          <pre><code>.bismillah-text-xs ... .bismillah-text-3xl
+.bismillah-font-bold
+.bismillah-text-uppercase</code></pre>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Layout</h3>
+          <pre><code>.bismillah-flex
+.bismillah-grid
+.bismillah-block
+.bismillah-inline-block
+.bismillah-hidden</code></pre>
+        </div>
+        <div class="card">
+          <h3>Flex Helpers</h3>
+          <pre><code>.bismillah-justify-start
+.bismillah-justify-center
+.bismillah-justify-between
+.bismillah-items-center
+.bismillah-flex-wrap</code></pre>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Borders & Radius</h3>
+          <pre><code>.bismillah-border
+.bismillah-border-primary
+.bismillah-rounded-lg
+.bismillah-rounded-full</code></pre>
+        </div>
+        <div class="card">
+          <h3>Shadows</h3>
+          <pre><code>.bismillah-shadow-sm
+.bismillah-shadow
+.bismillah-shadow-xl
+.bismillah-shadow-none</code></pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Custom latest utilities</h3>
+        <p>Added in this branch:</p>
+        <ul>
+          <li>`.bismillah-transition-fast`, `.bismillah-transition-normal`, `.bismillah-transition-smooth`</li>
+          <li>`.bismillah-cursor-pointer`</li>
+          <li>`.bismillah-w-100`, `.bismillah-h-100`, `.bismillah-max-w-none`</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Components</h2>
+      <div class="card">
+        <h3>Buttons</h3>
+        <p><code>.bismillah-btn</code> base with variants: <code>.bismillah-btn-primary</code>, <code>.bismillah-btn-secondary</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Cards</h3>
+        <p><code>.bismillah-card</code> with hover transformation and subtle shadow.</p>
+      </div>
+      <div class="card">
+        <h3>Alerts</h3>
+        <p><code>.bismillah-alert</code>; variants: <code>.bismillah-alert-success</code>, <code>.bismillah-alert-warning</code>, <code>.bismillah-alert-danger</code>.</p>
+      </div>
+
+      <div class="card">
+        <h3>Badges</h3>
+        <p><code>.bismillah-badge</code> + variants:</p>
+        <pre><code>.bismillah-badge-primary
+.bismillah-badge-secondary
+.bismillah-badge-success
+.bismillah-badge-warning
+.bismillah-badge-danger
+.bismillah-badge-info
+.bismillah-badge-light
+.bismillah-badge-dark
+.bismillah-badge-outline</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>Toasts</h3>
+        <p><code>.bismillah-toast</code> + variants:</p>
+        <pre><code>.bismillah-toast-success
+.bismillah-toast-warning
+.bismillah-toast-danger
+.bismillah-toast-info</code></pre>
+        <p>Close button: <code>.bismillah-toast-close</code> (JS handles fade-and-remove).</p>
+      </div>
+
+      <div class="card">
+        <h3>Sidebar, Navbar, Accordion etc.</h3>
+        <p>Other utilities are available in the respective component CSS files under <code>src/components</code>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Example: badges + toasts</h2>
+      <div class="card inline-demo">
+        <span class="bismillah-badge bismillah-badge-primary">Primary</span>
+        <span class="bismillah-badge bismillah-badge-success">Success</span>
+        <div class="bismillah-toast bismillah-toast-info" style="display:inline-flex; align-items:center;">
+          <span>Info toast</span>
+          <button class="bismillah-toast-close" style="font-size:1rem; line-height:1;">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Quick reference shell</h2>
+      <pre><code>&lt;div class="bismillah-container"&gt;
+  &lt;h1 class="bismillah-text-4xl bismillah-font-bold"&gt;Heading&lt;/h1&gt;
+  &lt;button class="bismillah-btn bismillah-btn-primary"&gt;Click&lt;/button&gt;
+  &lt;span class="bismillah-badge bismillah-badge-success"&gt;Live&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="bismillah-toast bismillah-toast-success"&gt;
+  &lt;span&gt;Saved successfully&lt;/span&gt;
+  &lt;button class="bismillah-toast-close"&gt;×&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+    </section>
+
+    <section>
+      <h2>8. Next.js Integration</h2>
+      <p>Use BismillahCSS in a Next.js project via global CSS import.</p>
+      <h3>App Router (Next.js 13+)</h3>
+      <pre><code>// app/layout.js
+import 'bismillahcss/dist/bismillah.min.css';
+import './globals.css';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+</code></pre>
+      <h3>Pages Router</h3>
+      <pre><code>// pages/_app.js
+import 'bismillahcss/dist/bismillah.min.css';
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+</code></pre>
+      <h3>Example page</h3>
+      <pre><code>// app/page.js or pages/index.js
+export default function Home() {
+  return (
+    <main className="bismillah-container bismillah-p-6">
+      <h1 className="bismillah-text-3xl bismillah-font-bold">Welcome to BismillahCSS</h1>
+      <button className="bismillah-btn bismillah-btn-primary">Click me</button>
+    </main>
+  );
+}
+</code></pre>
+      <div class="note">
+        <strong>Tip:</strong> For local development of your own source, import <code>../src/bismillah.css</code> instead of CDN/package path.
+      </div>
+    </section>
+
+    <section>
+      <h2>9. Contribution</h2>
+      <p>Open a pull request on <a href="https://github.com/BismillahCSS/bismillahcss-framework" target="_blank">GitHub</a>. Add tests to <code>tests/</code> when appropriate.</p>
+      <p>Main CSS growth points:</p>
+      <ul>
+        <li>Add more components in <code>src/components</code></li>
+        <li>Add unit tests in <code>tests</code> (empty currently)</li>
+        <li>Update README and docs pages to keep in sync</li>
+      </ul>
+    </section>
+
+    <footer class="note">
+      <strong>Note:</strong> This page is generated from the framework's available CSS definitions and your requested updates. For live preview, open <code>docs/documentation.html</code> locally or in your environment.
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ============================= */
+/* 🔔 BismillahCSS - Toast */
+/* ============================= */
+
+.bismillah-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 280px;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.65rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.17);
+  background: rgba(25, 25, 25, 0.98);
+  color: #fff;
+  font-size: 0.9rem;
+  animation: bismillah-toast-in 0.25s ease-out both;
+  position: relative;
+}
+
+@keyframes bismillah-toast-in {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+.bismillah-toast-success { background: #28a745; }
+.bismillah-toast-warning { background: #ffc107; color: #212529; }
+.bismillah-toast-danger  { background: #dc3545; }
+.bismillah-toast-info    { background: #0ea5e9; }
+
+.bismillah-toast-close {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: currentColor;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}

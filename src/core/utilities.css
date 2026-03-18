@@ -209,6 +209,164 @@ text-align: center;
     color: white;
 }
 
+/* Display and Visibility */
+.bismillah-hidden {
+    display: none !important;
+}
+.bismillah-block {
+    display: block;
+}
+.bismillah-inline {
+    display: inline;
+}
+.bismillah-inline-block {
+    display: inline-block;
+}
+
+/* Flex and Alignment */
+.bismillah-flex-col {
+    flex-direction: column;
+}
+.bismillah-flex-wrap {
+    flex-wrap: wrap;
+}
+.bismillah-justify-start {
+    justify-content: flex-start;
+}
+.bismillah-justify-center {
+    justify-content: center;
+}
+.bismillah-justify-between {
+    justify-content: space-between;
+}
+.bismillah-items-start {
+    align-items: flex-start;
+}
+.bismillah-items-center {
+    align-items: center;
+}
+.bismillah-items-end {
+    align-items: flex-end;
+}
+
+/* Typography Helpers */
+.bismillah-text-uppercase {
+    text-transform: uppercase;
+}
+.bismillah-text-lowercase {
+    text-transform: lowercase;
+}
+.bismillah-text-capitalize {
+    text-transform: capitalize;
+}
+.bismillah-text-italic {
+    font-style: italic;
+}
+.bismillah-text-underline {
+    text-decoration: underline;
+}
+.bismillah-text-line-through {
+    text-decoration: line-through;
+}
+
+/* Transition Helpers */
+.bismillah-transition-fast {
+    transition: all 0.2s ease-in-out;
+}
+.bismillah-transition-normal {
+    transition: all 0.3s ease-in-out;
+}
+.bismillah-transition-smooth {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Cursor */
+.bismillah-cursor-pointer {
+    cursor: pointer;
+}
+
+/* Width / Height */
+.bismillah-w-100 {
+    width: 100%;
+}
+.bismillah-h-100 {
+    height: 100%;
+}
+.bismillah-max-w-none {
+    max-width: none;
+}
+
+/* Unique utilities (not typical in standard frameworks) */
+.bismillah-glass {
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.bismillah-neumorphism {
+    background: #e6ecf5;
+    box-shadow: 8px 8px 18px #b8c4d7, -8px -8px 18px #ffffff;
+}
+
+.bismillah-frosted {
+    background: rgba(10, 25, 47, 0.63);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.bismillah-gradient-border {
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #3b82f6 0%, #9333ea 45%, #ec4899 100%) 1;
+}
+
+.bismillah-line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bismillah-line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bismillah-aspect-16-9 {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.bismillah-aspect-16-9 > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bismillah-text-gradient {
+    background-image: linear-gradient(90deg, #0ea5e9, #f43f5e, #eab308);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bismillah-animate-pulse-quick {
+    animation: bismillah-pulse 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bismillah-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+
 .bismillah-container {
 width: 90%;
     max-width: 1200px;
