@@ -243,6 +243,76 @@
     transform: translateX(-50%) translateY(-10px);
   }
   
+  /* Hero Section */
+  .bismillah-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #23272A, #5865F2);
+    color: #fff;
+  }
+
+  .bismillah-hero-title {
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #EB459E, #5865F2, #57F287);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  .bismillah-hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+    max-width: 760px;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .bismillah-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .bismillah-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bismillah-section-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .bismillah-section-divider {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(88,101,242,0.3), rgba(255,255,255,0.05));
+    border-radius: 12px;
+  }
+
+  .bismillah-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.25rem;
+  }
+
   /* Modern Skeleton Loading */
   .bismillah-skeleton {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.12) 37%, rgba(0, 0, 0, 0.06) 63%);

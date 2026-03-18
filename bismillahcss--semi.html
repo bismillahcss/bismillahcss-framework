@@ -112,7 +112,22 @@
       border-color: #fff;
       box-shadow: 0 0 0 2px var(--color);
     }
-    
+
+    .bismillah-neon-demo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .bismillah-neon-demo .card {
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(2, 6, 18, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.6);
+      box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
+      color: white;
+    }
+
     .code-block {
       background-color: #f5f5f5;
       border-radius: 6px;
@@ -1391,7 +1406,43 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- Extra Futuristic/Neonic Section -->
+    <section id="futuristic-extra" class="section">
+      <h2 class="section-title">Extra Futuristic & Neonic Styles</h2>
+      <div class="component-demo">
+        <h3 class="component-title">Radical UI Samples</h3>
+        <div class="example-box bismillah-quantum-grid">
+          <div class="bismillah-card bismillah-neon-card bismillah-future-border-animated bismillah-p-4 bismillah-rounded-lg bismillah-shadow-neon">
+            <h3 class="bismillah-future-gradient-text">Quantum Glow</h3>
+            <p>Use: <code>.bismillah-neon-card</code>, <code>.bismillah-future-border-animated</code>, <code>.bismillah-shadow-neon</code></p>
+          </div>
+          <div class="bismillah-card bismillah-data-stream bismillah-hologram bismillah-p-4 bismillah-rounded-lg">
+            <h3 class="bismillah-text-white">Data Stream</h3>
+            <p>Use: <code>.bismillah-data-stream</code>, <code>.bismillah-hologram</code></p>
+          </div>
+          <div class="bismillah-card bismillah-matrix-bg bismillah-p-4 bismillah-rounded-lg bismillah-border-dashed">
+            <h3 class="bismillah-neon-text">Matrix Background</h3>
+            <p>Use: <code>.bismillah-matrix-bg</code>, <code>.bismillah-border-dashed</code></p>
+          </div>
+          <div class="bismillah-card bismillah-vaporwave bismillah-p-4 bismillah-rounded-lg bismillah-future-pulse">
+            <h3 class="bismillah-future-gradient-text">Vaporwave</h3>
+            <p>Use: <code>.bismillah-vaporwave</code>, <code>.bismillah-future-pulse</code></p>
+          </div>
+        </div>
+        <div class="code-block">
+<pre><code>&lt;div class="bismillah-card bismillah-neon-card bismillah-future-border-animated bismillah-shadow-neon bismillah-p-4"&gt;
+  &lt;h3 class="bismillah-future-gradient-text"&gt;Quantum Glow&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;div class="bismillah-card bismillah-data-stream bismillah-hologram bismillah-p-4"&gt;
+  &lt;h3 class="bismillah-text-white"&gt;Data Stream&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </section>
+
     <!-- Cartoons Section -->
     <section id="cartoons" class="section">
       <h2 class="section-title">Cartoons</h2>
@@ -1474,6 +1525,40 @@
                 <div class="bismillah-doraemon-bell"></div>
               </div>
               <p style="text-align: center; margin-top: 1rem;">Doraemon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Utilities Section -->
+    <section id="new-utilities" class="section">
+      <h2 class="section-title">New Utilities</h2>
+      <div class="component-demo">
+        <h3 class="component-title">Responsive Grid + Flex + Effects</h3>
+        <div class="example-box bismillah-grid bismillah-grid-cols-responsive bismillah-gap-3">
+          <div class="bismillah-card bismillah-bg-neon-blue bismillah-text-white bismillah-p-3 bismillah-shadow-lg bismillah-hover-scale">Responsive item 1</div>
+          <div class="bismillah-card bismillah-bg-neon-pink bismillah-text-white bismillah-p-3 bismillah-shadow-lg bismillah-hover-rotate">Responsive item 2</div>
+          <div class="bismillah-card bismillah-bg-neon-yellow bismillah-text-black bismillah-p-3 bismillah-shadow-lg bismillah-hover-shadow">Responsive item 3</div>
+          <div class="bismillah-card bismillah-bg-gradient-primary bismillah-text-white bismillah-p-3 bismillah-shadow-lg bismillah-hover-glow">Responsive item 4</div>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <h3 class="component-title">Modern utility combinations</h3>
+        <div class="example-box bismillah-flex bismillah-flex-wrap bismillah-gap-3">
+          <button class="bismillah-btn bismillah-btn-primary bismillah-btn-glow bismillah-cursor-pointer">Button</button>
+          <button class="bismillah-btn bismillah-btn-secondary bismillah-btn-outline bismillah-cursor-pointer">Button</button>
+          <div class="bismillah-box-shadow bismillah-rounded-lg bismillah-p-4 bismillah-backdrop-blur-lg bismillah-bg-white/30">Glass-card style</div>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <h3 class="component-title">Truncate + Aspect Ratio</h3>
+        <div class="example-box">
+          <div class="bismillah-aspect-16-9 bismillah-border bismillah-border-primary bismillah-rounded">
+            <div class="bismillah-flex bismillah-items-center bismillah-justify-center bismillah-h-full bismillah-p-3">
+              <p class="bismillah-truncate" style="width: 100%; max-width: 60%;">This text is truncated inside a 16:9 container with the new utility set of classes and is longer than one line.</p>
             </div>
           </div>
         </div>

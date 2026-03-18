@@ -105,6 +105,45 @@ background: linear-gradient(45deg, var(--bismillah-primary), var(--bismillah-sec
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
+
+/* Neon Buttons */
+.bismillah-btn-neon {
+  background: linear-gradient(120deg, #5865f2, #eb459e, #57f287);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.7), 0 0 25px rgba(235, 69, 158, 0.6), 0 0 35px rgba(87, 242, 135, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.bismillah-btn-neon:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(88, 101, 242, 1), 0 0 35px rgba(235, 69, 158, 0.9), 0 0 45px rgba(87, 242, 135, 0.8);
+}
+
+.bismillah-btn-outline-neon {
+  background: rgba(0,0,0,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.3), 0 0 12px rgba(255,255,255,0.2);
+}
+
+.bismillah-btn-outline-neon:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.02);
+}
+
+/* Responsive Button Utility */
+.bismillah-btn-full {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .bismillah-btn-lg, .bismillah-btn-xl {
+    width: 100%;
+    padding: 14px 18px;
+  }
+}
 /* Glassmorphism Button */
 .bismillah-btn-glass {
 background: rgba(255, 255, 255, 0.2);

@@ -250,6 +250,72 @@
     background: var(--bismillah-input-bg, rgba(0, 0, 0, 0.03));
     color: var(--bismillah-text-color, #333);
   }
+
+  /* Neon style navbar */
+  .bismillah-navbar-neon {
+    background: linear-gradient(90deg, rgba(88, 101, 242, 0.45), rgba(235, 69, 158, 0.45));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.45), 0 0 30px rgba(235, 69, 158, 0.35);
+    backdrop-filter: blur(10px);
+  }
+
+  .bismillah-navbar-neon .bismillah-navbar-logo {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  }
+
+  .bismillah-navbar-neon .bismillah-navbar-link {
+    color: #f2f2f2;
+  }
+
+  .bismillah-navbar-neon .bismillah-navbar-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .bismillah-navbar-neon .bismillah-navbar-link.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .bismillah-navbar-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 1.25rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .bismillah-navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 100%;
+    margin-top: 0.5rem;
+    z-index: 999;
+  }
+
+  .bismillah-navbar-menu.visible {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .bismillah-navbar-links {
+      display: none;
+    }
+    .bismillah-navbar-toggle {
+      display: inline-flex;
+    }
+    .bismillah-navbar-right {
+      display: none;
+    }
+  }
   
   .bismillah-search-input:focus {
     width: 250px;

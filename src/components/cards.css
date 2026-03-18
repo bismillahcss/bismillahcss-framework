@@ -121,6 +121,21 @@ background: var(--card-bg, #ffffff);
 transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
+/* Neon Card */
+.bismillah-b-card-neon {
+    background: linear-gradient(145deg, rgba(88, 101, 242, 0.2), rgba(235, 69, 158, 0.2), rgba(87, 242, 135, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(88, 101, 242, 0.4), 0 0 20px rgba(235, 69, 158, 0.4), 0 0 20px rgba(87, 242, 135, 0.4);
+    color: #fff;
+}
+
+.bismillah-b-card-neon .bismillah-b-card-header,
+.bismillah-b-card-neon .bismillah-b-card-body,
+.bismillah-b-card-neon .bismillah-b-card-footer {
+    color: #fff;
+}
+
 /* ========== Responsive Adjustments ========== */
 @media (max-width: 1024px) {
 .bismillah-b-card-grid {

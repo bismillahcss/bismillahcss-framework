@@ -4,34 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BismillahCSS - Modern CSS Framework</title>
-    <link rel="stylesheet" href="dist/bismillah.css">
+    <link rel="stylesheet" href="dist/bismillah.min.css">
     
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css">
     
     <style>
-        /* Custom styles for the showcase */
-        :root {
-            --primary-color: #5865F2;
-            --secondary-color: #EB459E;
-            --accent-color: #57F287;
-            --dark-bg: #23272A;
-            --darker-bg: #1A1C20;
-            --light-text: #FFFFFF;
-            --muted-text: #B9BBBE;
-            --card-bg: rgba(255, 255, 255, 0.1);
-            --card-border: rgba(255, 255, 255, 0.05);
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #23272A, #5865F2);
-            color: var(--light-text);
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        
+      body { margin: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+      .bismillah-main-bg { background: linear-gradient(135deg, #23272A, #5865F2); color: #fff; }
+      .bismillah-main-max { max-width: 1200px; margin: 0 auto; width: 100%; }
         .main-container {
             max-width: 100%;
             overflow-x: hidden;
@@ -350,8 +331,8 @@
             <p class="hero-subtitle">A modern, feature-rich CSS framework for creating beautiful, responsive, and accessible web interfaces</p>
             
             <div class="hero-buttons">
-                <a href="#components" class="bismillah-form-btn bismillah-form-btn-primary bismillah-form-btn-lg">Explore Components</a>
-                <a href="#" class="bismillah-form-btn bismillah-form-btn-outline-primary bismillah-form-btn-lg">Get Started</a>
+                <a href="#components" class="bismillah-btn bismillah-btn-primary bismillah-btn-lg">Explore Components</a>
+                <a href="#" class="bismillah-btn bismillah-btn-outline bismillah-btn-lg">Get Started</a>
             </div>
         </section>
         
@@ -439,7 +420,7 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="bismillah-form-btn bismillah-form-btn-primary">Submit</button>
+                        <button type="submit" class="bismillah-btn bismillah-btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
@@ -723,6 +704,35 @@
                     </div>
                 </div>
             </div>
+
+            <div class="feature-card bismillah-future-glow bismillah-shadow-neon bismillah-slide-in-up">
+                <h2 class="feature-title bismillah-neon-text">Neonic Futuristic Utilities</h2>
+                <p class="feature-description">Neonic cards and buttons from the new utilities.</p>
+
+                <div class="component-showcase bismillah-future-grid">
+                    <div class="bismillah-card bismillah-neon-card bismillah-p-4 bismillah-rounded-lg bismillah-future-pulse">
+                        <h3 class="bismillah-future-gradient-text">Neon Card</h3>
+                        <p>Use <code>.bismillah-neon-card</code> + <code>.bismillah-future-pulse</code></p>
+                    </div>
+                    <div class="bismillah-card bismillah-neon-card bismillah-p-4 bismillah-rounded-lg bismillah-neon-speck">
+                        <h3 class="bismillah-neon-text">Neon Speck</h3>
+                        <p>Use <code>.bismillah-neon-speck</code> pseudo-animated glow spots.</p>
+                    </div>
+                    <div class="bismillah-card bismillah-neon-card bismillah-p-4 bismillah-rounded-lg">
+                        <button class="bismillah-neon-btn bismillah-mt-2">Neon Button</button>
+                        <p>Use <code>.bismillah-neon-btn</code> for high-impact action items.</p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>&lt;div class="bismillah-card bismillah-neon-card bismillah-future-pulse bismillah-p-4 bismillah-rounded-lg"&gt;
+  &lt;h3 class="bismillah-future-gradient-text"&gt;Neon Card&lt;/h3&gt;
+  &lt;button class="bismillah-neon-btn"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            </div>
         </section>
         
         <!-- Section Divider -->
@@ -837,12 +847,50 @@
                 </div>
             </div>
         </section>
-        
+
+        <!-- Futuristic Utilities Section -->
+        <section id="futuristic" class="feature-section">
+            <div class="feature-card bismillah-slide-in-up">
+                <h2 class="feature-title">Futuristic Utilities</h2>
+                <p class="feature-description">New futuristic utilities with a usage guide embedded directly in HTML.</p>
+
+                <div class="component-showcase bismillah-future-grid">
+                    <div class="bismillah-card bismillah-future-glow bismillah-p-4 bismillah-rounded-lg bismillah-future-pulse">
+                        <h3 class="bismillah-text-gradient">Glow Effect Card</h3>
+                        <p>Classes: <code>.bismillah-future-glow</code>, <code>.bismillah-future-pulse</code></p>
+                    </div>
+
+                    <div class="bismillah-card bismillah-future-digital bismillah-p-4 bismillah-rounded-lg bismillah-border-double">
+                        <h3 class="bismillah-future-gradient-text">Digital Panel</h3>
+                        <p>Classes: <code>.bismillah-future-digital</code>, <code>.bismillah-future-gradient-text</code></p>
+                    </div>
+
+                    <div class="bismillah-card bismillah-future-neon-border bismillah-p-4 bismillah-rounded-lg">
+                        <h3 class="bismillah-text-white">Neon Border Card</h3>
+                        <p>Classes: <code>.bismillah-future-neon-border</code>, <code>.bismillah-border-dashed</code></p>
+                    </div>
+
+                    <div class="bismillah-card bismillah-future-glow bismillah-future-border-animated bismillah-p-4 bismillah-rounded-lg bismillah-text-white">
+                        <h3 class="bismillah-text-gradient">Animated Border</h3>
+                        <p>Classes: <code>.bismillah-future-border-animated</code>, <code>.bismillah-future-pulse</code></p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>&lt;div class="bismillah-card bismillah-future-glow bismillah-future-pulse bismillah-p-4 bismillah-rounded-lg"&gt;
+  &lt;h3 class="bismillah-future-gradient-text"&gt;Futuristic card&lt;/h3&gt;
+  &lt;p&gt;Use .bismillah-future-... utilities for neon/blur effects&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
         <!-- Section Divider -->
         <div class="section-divider">
             CARTOONS
         </div>
-        
+
         <!-- Cartoons Section -->
         <section id="cartoons" class="feature-section">
             <div class="feature-card bismillah-slide-in-up">
@@ -906,6 +954,72 @@
             </div>
         </section>
         
+        <!-- New utilities section -->
+        <section id="new-utilities" class="feature-section">
+            <div class="feature-card bismillah-slide-in-up">
+                <h2 class="feature-title">New Utilities Live Demo</h2>
+                <p class="feature-description">Using new utilities from `src/core/utilities.css` straight in this demo.</p>
+                <div class="component-showcase bismillah-grid bismillah-grid-cols-responsive bismillah-gap-3">
+                    <div class="bismillah-card bismillah-bg-neon-blue bismillah-text-white bismillah-border-dashed bismillah-p-4 bismillah-rounded-lg bismillah-text-shadow-neon">
+                        <strong>Neon dotted border</strong>
+                        <p class="bismillah-text-sm">`.bismillah-border-dashed` + `.bismillah-text-shadow-neon`</p>
+                    </div>
+                    <div class="bismillah-card bismillah-bg-neon-pink bismillah-text-white bismillah-ringed bismillah-p-4 bismillah-rounded-lg bismillah-opacity-95">
+                        <strong>Ring + opacity</strong>
+                        <p class="bismillah-text-sm">`.bismillah-ringed` + `.bismillah-opacity-95`</p>
+                    </div>
+                    <div class="bismillah-card bismillah-bg-gradient-primary bismillah-text-white bismillah-p-4 bismillah-rounded-lg bismillah-transition-backdrop bismillah-hover-glow">
+                        <strong>Backdrop transition</strong>
+                        <p class="bismillah-text-sm">`.bismillah-transition-backdrop` + `.bismillah-hover-glow`</p>
+                    </div>
+                    <div class="bismillah-card bismillah-bg-black bismillah-text-white bismillah-border-double bismillah-p-4 bismillah-rounded-lg bismillah-text-shadow-lg">
+                        <strong>Double border</strong>
+                        <p class="bismillah-text-sm">`.bismillah-border-double` + `.bismillah-text-shadow-lg`</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extreme Futuristic / Neonic Utilities -->
+        <section id="extreme-neon" class="feature-section">
+            <div class="feature-card bismillah-slide-in-up">
+                <h2 class="feature-title">Extreme Futuristic & Neonic Utilities</h2>
+                <p class="feature-description">Extraordinary style combos with fully documented usage examples below.</p>
+
+                <div class="component-showcase bismillah-quantum-grid">
+                    <div class="bismillah-card bismillah-neon-card bismillah-future-border-animated bismillah-p-4 bismillah-rounded-lg bismillah-shadow-neon">
+                        <h3 class="bismillah-future-gradient-text">Quantum Glow</h3>
+                        <p>Use <code>.bismillah-neon-card</code> + <code>.bismillah-future-border-animated</code> + <code>.bismillah-shadow-neon</code></p>
+                    </div>
+                    <div class="bismillah-card bismillah-data-stream bismillah-p-4 bismillah-rounded-lg bismillah-hologram">
+                        <h3 class="bismillah-text-white">Data Stream</h3>
+                        <p>Use <code>.bismillah-data-stream</code> + <code>.bismillah-hologram</code> for animated background.</p>
+                    </div>
+                    <div class="bismillah-card bismillah-matrix-bg bismillah-p-4 bismillah-rounded-lg bismillah-border-dashed">
+                        <h3 class="bismillah-neon-text">Matrix Interface</h3>
+                        <p>Use <code>.bismillah-matrix-bg</code> + <code>.bismillah-border-dashed</code>.</p>
+                    </div>
+                    <div class="bismillah-card bismillah-vaporwave bismillah-p-4 bismillah-rounded-lg bismillah-future-pulse">
+                        <h3 class="bismillah-future-gradient-text">Vaporwave Vibe</h3>
+                        <p>Use <code>.bismillah-vaporwave</code> + <code>.bismillah-future-pulse</code>.</p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>&lt;div class="bismillah-card bismillah-neon-card bismillah-future-border-animated bismillah-shadow-neon bismillah-p-4"&gt;
+  &lt;h3 class="bismillah-future-gradient-text"&gt;Quantum Glow&lt;/h3&gt;
+  &lt;p&gt;Futuristic styles powered by BismillahCSS utilities.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="bismillah-card bismillah-data-stream bismillah-hologram bismillah-p-4"&gt;
+  &lt;h3 class="bismillah-text-white"&gt;Data Stream&lt;/h3&gt;
+  &lt;p&gt;Animated gradient background + hologram overlay.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <h2 class="cta-title">Ready to Get Started?</h2>

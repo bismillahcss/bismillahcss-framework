@@ -1039,6 +1039,400 @@ animation: pulse 1s infinite;
 box-shadow: 0 0 15px var(--bismillah-primary);
     transition: box-shadow 0.3s ease-in-out;
 }
+
+/* Added extra utilities */
+.bismillah-opacity-95 {
+    opacity: 0.95;
+}
+.bismillah-opacity-80 {
+    opacity: 0.8;
+}
+.bismillah-border-dashed {
+    border-style: dashed;
+}
+.bismillah-border-double {
+    border-style: double;
+}
+.bismillah-text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.bismillah-text-shadow-lg {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.45);
+}
+.bismillah-text-shadow-neon {
+    text-shadow: 0 0 8px rgba(0,255,255,0.8), 0 0 12px rgba(0,255,255,0.6);
+}
+.bismillah-ringed {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35), 0 0 16px rgba(99, 102, 241, 0.2);
+}
+.bismillah-transition-backdrop {
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+.bismillah-position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Futuristic utilities */
+.bismillah-future-glow {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(59, 130, 246, 0.25));
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.6), 0 0 32px rgba(59, 130, 246, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bismillah-future-digital {
+    background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.5), rgba(59, 130, 246, 0.1));
+    color: #e0efff;
+    border: 1px solid rgba(248, 250, 252, 0.2);
+}
+
+.bismillah-future-neon-border {
+    border: 2px solid rgba(59, 130, 246, 0.6);
+    box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.7), 0 0 20px rgba(14, 165, 233, 0.5);
+}
+
+.bismillah-future-gradient-text {
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bismillah-future-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.bismillah-future-border-animated {
+    border: 2px solid transparent;
+    background-image: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(59, 130, 246, 0.25)),
+                      linear-gradient(45deg, #0ea5e9, #8b5cf6, #ec4899);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+@keyframes neonPulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(59, 130, 246, 0.6), 0 0 22px rgba(99, 102, 241, 0.55); }
+    50% { box-shadow: 0 0 14px rgba(59, 130, 246, 0.8), 0 0 30px rgba(99, 102, 241, 0.75); }
+}
+
+.bismillah-future-pulse {
+    animation: neonPulse 2.5s ease-in-out infinite;
+}
+
+/* Extra futuristic/neonic utilities */
+.bismillah-quantum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    background: radial-gradient(circle at top left, rgba(8, 145, 178, .2), rgba(15, 23, 42, .85));
+    border: 1px solid rgba(14, 165, 233, .4);
+    box-shadow: inset 0 0 16px rgba(8, 145, 178, .35);
+}
+
+.bismillah-data-stream {
+    background: linear-gradient(90deg, rgba(7,99,255,0.4), rgba(59,130,246,0.3), rgba(236,72,153,0.35));
+    background-size: 200% 200%;
+    animation: dataFlow 6s linear infinite;
+}
+
+@keyframes dataFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.bismillah-hologram {
+    color: #c0f4ff;
+    text-shadow: 0 0 5px rgba(0,255,255,0.7), 0 0 12px rgba(125,211,252,0.75);
+    background-color: rgba(21, 39, 77, 0.45);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.bismillah-glitch {
+    color: #8ecae6;
+    position: relative;
+    overflow: hidden;
+}
+.bismillah-glitch::before,
+.bismillah-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.8;
+    clip: rect(0, 9999px, 0, 0);
+}
+.bismillah-glitch::before { animation: glitchTop 2s infinite linear; color: #ff006e; }
+.bismillah-glitch::after { animation: glitchBottom 2.5s infinite linear; color: #00fff3; }
+
+@keyframes glitchTop {
+    0% { clip: rect(0, 9999px, 0, 0); transform: translate(0); }
+    10% { clip: rect(2px, 9999px, 15px, 0); transform: translate(-1px, -1px); }
+    20% { clip: rect(0, 9999px, 50px, 0); transform: translate(1px, 2px); }
+    30% { clip: rect(10px, 9999px, 35px, 0); transform: translate(-1px, 1px); }
+    40% { clip: rect(0, 9999px, 22px, 0); transform: translate(0); }
+    50% { clip: rect(8px, 9999px, 40px, 0); transform: translate(1px, 0); }
+    60% { clip: rect(0, 9999px, 30px, 0); transform: translate(-1px, -1px); }
+    70% { clip: rect(3px, 9999px, 20px, 0); transform: translate(1px, 2px); }
+    80% { clip: rect(0, 9999px, 50px, 0); transform: translate(-1px, -2px); }
+    90% { clip: rect(15px, 9999px, 40px, 0); transform: translate(0); }
+    100% { clip: rect(0, 9999px, 0, 0); transform: translate(0); }
+}
+
+@keyframes glitchBottom {
+    0% { clip: rect(0, 9999px, 0, 0); transform: translate(0); }
+    10% { clip: rect(12px, 9999px, 60px, 0); transform: translate(2px, 1px); }
+    20% { clip: rect(5px, 9999px, 100px, 0); transform: translate(-2px, -1px); }
+    30% { clip: rect(20px, 9999px, 85px, 0); transform: translate(2px, 0); }
+    40% { clip: rect(0, 9999px, 20px, 0); transform: translate(-1px, 1px); }
+    50% { clip: rect(10px, 9999px, 45px, 0); transform: translate(0); }
+    60% { clip: rect(8px, 9999px, 30px, 0); transform: translate(-1px, 0); }
+    70% { clip: rect(25px, 9999px, 65px, 0); transform: translate(1px, -1px); }
+    80% { clip: rect(0, 9999px, 52px, 0); transform: translate(2px, 1px); }
+    90% { clip: rect(15px, 9999px, 80px, 0); transform: translate(-2px, -2px); }
+    100% { clip: rect(0, 9999px, 0, 0); transform: translate(0); }
+}
+
+.bismillah-matrix-bg {
+    position: relative;
+    background: #020809;
+    color: #0fef17;
+    overflow: hidden;
+}
+.bismillah-matrix-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.bismillah-vaporwave {
+    background: linear-gradient(135deg, #ff7ce5 0%, #7f5af0 50%, #50d4ff 100%);
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255,255,255,0.35);
+}
+
+.bismillah-glow-triangle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, rgba(56, 189, 248, 0.8), rgba(236, 72, 153, 0.8));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.8);
+    animation: spinHue 8s linear infinite;
+}
+
+@keyframes spinHue {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Neon / Neonic utilities */
+.bismillah-neon-card {
+    background: rgba(9, 15, 34, 0.75);
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6), 0 0 40px rgba(139, 92, 246, 0.4);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.bismillah-neon-btn {
+    color: #f8fafc;
+    background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    border: 1px solid rgba(239, 68, 68, 0.75);
+    box-shadow: 0 0 8px rgba(14, 165, 233, 0.85), 0 0 25px rgba(139, 92, 246, 0.6);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease;
+}
+.bismillah-neon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 1), 0 0 32px rgba(139, 92, 246, 0.75);
+}
+
+.bismillah-neon-text {
+    color: #0ea5e9;
+    text-shadow: 0 0 10px #0ea5e9, 0 0 20px #8b5cf6, 0 0 35px #ec4899;
+}
+
+.bismillah-neon-speck {
+    position: relative;
+}
+.bismillah-neon-speck::before,
+.bismillah-neon-speck::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+}
+.bismillah-neon-speck::before {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #38bdf8, transparent);
+    top: -10px;
+    left: 10px;
+}
+.bismillah-neon-speck::after {
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #a855f7, transparent);
+    bottom: -8px;
+    right: 12px;
+}
+
+.bismillah-neon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.bismillah-shadow-neon {
+    box-shadow: 0 0 18px rgba(14, 165, 233, 0.4), 0 0 30px rgba(139, 92, 246, 0.4), inset 0 0 10px rgba(8, 145, 178, 0.35);
+}
+
+/* ========================= */
+/* ✨ New expanded utilities */
+/* ========================= */
+
+/* Flex helpers */
+.bismillah-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.bismillah-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.bismillah-flex-nowrap {
+    flex-wrap: nowrap;
+}
+.bismillah-flex-wrap {
+    flex-wrap: wrap;
+}
+.bismillah-justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* Grid helpers */
+.bismillah-grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.bismillah-grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+.bismillah-grid-cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Sizing helpers */
+.bismillah-w-full {
+    width: 100%;
+}
+.bismillah-h-full {
+    height: 100%;
+}
+.bismillah-max-h-screen {
+    max-height: 100vh;
+}
+.bismillah-min-h-screen {
+    min-height: 100vh;
+}
+
+/* Transform utilities */
+.bismillah-scale-95 {
+    transform: scale(0.95);
+}
+.bismillah-scale-105 {
+    transform: scale(1.05);
+}
+.bismillah-rotate-1 {
+    transform: rotate(1deg);
+}
+.bismillah-rotate-3 {
+    transform: rotate(3deg);
+}
+
+/* Overflow and text wrapping */
+.bismillah-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bismillah-break-words {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Backdrop filter helpers */
+.bismillah-backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.bismillah-backdrop-blur-lg {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ring and focus helpers */
+.bismillah-ring {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
+}
+.bismillah-ring-2 {
+    box-shadow: 0 0 0 2px rgba(252, 211, 77, 0.45);
+}
+.bismillah-focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.45);
+}
+
+/* Misc utilities */
+.bismillah-caret-pointer {
+    cursor: pointer;
+}
+.bismillah-no-scroll {
+    overflow: hidden;
+}
+.bismillah-icon-lg {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+.bismillah-icon-xl {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Responsive helpers */
+@media (max-width: 640px) {
+    .bismillah-grid-cols-responsive {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+    .bismillah-grid-cols-responsive {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+@media (min-width: 1025px) {
+    .bismillah-grid-cols-responsive {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
 /* BismillahCSS - Utilities (Part 13) */
 
 /* Advanced Display Utilities */
